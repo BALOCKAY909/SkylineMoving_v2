@@ -1,0 +1,13 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
+<div class="home-section">
+    <div class="home-hero">
+        <h1 class="home-hero-title fade-in">The Last Movers<br>You'll Ever Need.</h1>
+        <p class="home-hero-text fade-in">Reliable, stress-free moving from start to finish.</p>
+    </div>
+    {% include "quoteBox.html" %}
+</div>
+{% endblock %}

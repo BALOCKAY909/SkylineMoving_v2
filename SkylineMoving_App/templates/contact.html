@@ -1,0 +1,69 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/contact.css' %}">
+<script src="{% static '/js/contact.js' %}" defer></script>
+
+<div class="contact-hero">
+        <h1 class="fade-in">Contact Skyline Moving</h1>
+        <p class="fade-in">Ready to move? Contact Skyline Moving today for a free quote and dependable service you can trust.</p>
+</div>
+<div class="contact-section" id="quote">
+    {% include 'quoteBox.html' %}
+    <div class="contact-details fade-in">
+        <h2>Contact Information</h2>
+        <div class="phone-box contact-box-fade">
+            <a href="tel:5312225122" class="box-link">
+                <div class="phone-box-header">
+                    <img src="{% static '/img/contactPhone.png' %}" alt="Phone" width="40" height="40">
+                    <div>
+                        <p><strong>Phone</strong></p>
+                        <span>(531) 222-5122</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="email-box contact-box-fade">
+            <a href="mailto:skyline.moving.gp@gmail.com" class="box-link">
+                <div class="email-box-header">
+                    <img src="{% static '/img/contactMail.png' %}" alt="Email" width="40" height="40">
+                    <div>
+                        <p><strong>Email</strong></p>
+                        <span>skyline.moving.gp@gmail.com</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="service-area-box contact-box-fade">
+            <div class="service-area-header">
+                <img src="{% static '/img/contactArea.png' %}" alt="Service Area" width="40" height="40">
+                <div>
+                    <p><strong>Service Area</strong></p>
+                    <span>Serving Omaha, Lincoln, and surrounding areas across Nebraska</span>
+                </div>
+            </div>
+        </div>
+        <div class="hours-box contact-box-fade">
+            <div class="hours-header">
+                <img src="{% static '/img/contactHours.png' %}" alt="Hours" width="40" height="40">
+                <div>
+                    <p><strong>Hours</strong></p>
+                    <span>Mon-Sun: 7:00 AM - 7:00 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="map-box contact-box-fade">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d416369.5486174066!2d-96.63368955107765!3d41.08258221497394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69a92128cb1289bd%3A0xd77008391f9d570!2sSkyline%20Moving!5e0!3m2!1sen!2sus!4v1780541518016!5m2!1sen!2sus"
+                width="100%"
+                height="400"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

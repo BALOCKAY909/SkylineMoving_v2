@@ -1,0 +1,66 @@
+.home-section
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(../img/Skyline_Moving_Truck.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 60px 40px;
+  min-height: calc(100vh - 100px);
+}
+
+.home-hero
+{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 480px;
+}
+
+.home-hero-title
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.home-hero-text
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px)
+{
+  .home-section
+  {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px;
+  }
+
+  .home-hero
+  {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .home-hero-title
+  {
+    font-size: clamp(1.8rem, 7vw, 3rem);
+  }
+
+  .home-hero-text
+  {
+    font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+  }
+}

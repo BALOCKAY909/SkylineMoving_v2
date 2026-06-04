@@ -1,0 +1,225 @@
+.contact-hero
+{
+  background-color: rgb(195, 28, 47);
+  padding: 150px 40px;
+  min-height: 300px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
+
+.contact-hero h1
+{
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.contact-hero p
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.contact-section
+{
+  padding: 40px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #dedede, #f0f0f0, #d2d2d2);
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+
+.contact-details
+{
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-details h2
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+  margin-top: 0;
+}
+
+.phone-box, .email-box, .service-area-box, .hours-box
+{
+  background: white;
+  border-radius: 16px;
+  border-top: 4px solid rgb(195, 28, 47);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-area-box, .hours-box
+{
+  padding: 20px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+
+.map-box
+{
+  margin-top: 20px;
+  border-radius: 16px;
+  border-top: 4px solid rgb(195, 28, 47);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.phone-box:hover, .email-box:hover, .service-area-box:hover, .hours-box:hover,
+.phone-box.contact-box-fade.done:hover, .email-box.contact-box-fade.done:hover,
+.service-area-box.contact-box-fade.done:hover, .hours-box.contact-box-fade.done:hover
+{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.phone-box-header
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.phone-box-header img
+{
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.email-box-header
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.email-box-header img
+{
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.service-area-header, .hours-header
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.service-area-header img, .hours-header img
+{
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.service-area-header span
+{
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6F6E72;
+}
+
+.hours-header span
+{
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6F6E72;
+}
+
+.phone-box
+{
+  margin-bottom: 20px;
+}
+
+.phone-box p, .email-box p, .service-area-box p, .hours-box p
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.0rem;
+  color: #333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.phone-box a, .email-box a
+{
+  color: rgb(195, 28, 47);
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+}
+
+.box-link
+{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+#quote
+{
+  scroll-margin-top: 120px;
+}
+
+.contact-box-fade
+{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  will-change: transform, opacity;
+  overflow-anchor: none;
+}
+
+.contact-box-fade.visible
+{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-box-fade.done
+{
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition-delay: 0s !important;
+}
+
+@media (max-width: 1096px)
+{
+  .contact-section
+  {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .contact-details
+  {
+    min-width: unset;
+    width: 100%;
+    max-width: 520px;
+  }
+}
+

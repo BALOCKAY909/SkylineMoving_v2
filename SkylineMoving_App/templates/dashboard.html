@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}Skyline Moving Nebraska{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static '/css/navigationBar.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navigation-bar">
+        <a class="nav-logo" href="/">
+            <img src="{% static '/img/skylineMovingLogo.JPG' %}" alt="Skyline Moving Logo">
+        </a>
+        <div class="nav-links">
+            <a href="/">
+                <button>Home</button>
+            </a>
+            <a href="/about/">
+                <button>About</button>
+            </a>
+            <a href="/contact/">
+                <button>Contact</button>
+            </a>
+        </div>
+        <a href="/contact/#quote" class="nav-quote-btn desktop-only">Get a Free Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/"><button>Home</button></a>
+            <a href="/about/"><button>About</button></a>
+            <a href="/contact/"><button>Contact</button></a>
+            <hr class="mobile-menu-divider">
+            <a href="/contact/#quote" class="nav-quote-btn">Get a Free Quote</a>
+            <a href="tel:5312225122" class="mobile-call-btn">
+                <img src="{% static '/img/callUsSymbol.png' %}" alt="Call Us" width="24" height="24">
+                Give us a Call
+            </a>
+        </div>
+    </nav>
+    <main>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="success-message">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </main>
+    <section class="site-info">
+        <h2 class="info-heading fade-in">Ready to Move?</h2>
+        <p class="info-description fade-in">Let Skyline Moving make your next move simple, smooth, and stress-free. 
+        <br>We handle the heavy lifting so you can focus on settling into your new space.</p>
+        <div class="info-buttons">
+            <a href="/contact/#quote">
+                <button class="info-btn fade-in">Get a Free Quote</button>
+            </a>
+            <a href="tel:5312225122">
+                <button class="info-btn fade-in">
+                    <img src="{% static '/img/callUsSymbol.png' %}" alt="Call Us" width="24" height="24">
+                    Give us a Call
+                </button>
+            </a>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="stats-item">
+            <span class="stats-value"></span>
+            <span class="stats-label"></span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-value"></span>
+            <span class="stats-label"></span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-value"></span>
+            <span class="stats-label"></span>
+        </div>
+        <div class="stats-item">
+            <span class="stats-value"></span>
+            <span class="stats-label"></span>
+        </div>
+    </section>
+    <script src="{% static '/js/dashboard.js' %}"></script>
+</body>
+</body>
+</html>

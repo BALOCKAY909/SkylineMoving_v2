@@ -1,0 +1,54 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/about.css' %}">
+<script src="{% static '/js/about.js' %}" defer></script>
+<div class="about-box">
+    <h1 class="fade-in">About Us</h1>
+</div>
+<div class="about-section">
+    <div class="about-section-content fade-in">
+        <div class="about-section-text">
+            <h2>Our Story</h2>
+            <p>
+            Skyline Moving was founded in May of 2025 by two college students from Omaha, Nebraska. 
+            What started as a side hustle while attending school quickly grew into a full-time business thanks to our strong work ethic, affordable pricing, and commitment to customer satisfaction. 
+            With 8+ combined years of moving experience, we understand how important it is to handle every move with care, efficiency, and professionalism. 
+            From local apartment moves to long-distance relocations, our goal is to make the moving process as stress-free as possible.
+            At Skyline Moving, we take pride in being reliable, hardworking, and detail-oriented. 
+            We treat every customer’s belongings like our own and always come prepared with the proper equipment, padding, and wrapping needed to get the job done safely.
+            </p>
+        </div>
+        <div class="about-section-image fade-in-right">
+            <img src="{% static '/img/BApic.png' %}" alt="BApic">
+        </div>
+    </div>
+</div>
+<div class="ourValues-section">
+    <h2 class="ourValues-header fade-in">Our Values</h2>
+    <p class="ourValues-description fade-in">These are the principles that guide how we work and serve every customer.</p>
+    <div class="ourValues-grid">
+        <div class="ourValues-card fade-in-left">
+            <img src="{% static '/img/ReliabilityIMG.png' %}" alt="Reliability Icon" width="50" height="50">
+            <h3>Reliability</h3>
+            <p>We show up on time, prepared, and ready to get the job done right.</p>
+        </div>
+        <div class="ourValues-card fade-in-left">
+            <img src="{% static '/img/CareIMG.png' %}" alt="Care Icon" width="50" height="50">
+            <h3>Care</h3>
+            <p>We treat every customer's belongings like they are our own.</p>
+        </div>
+        <div class="ourValues-card fade-in-left">
+            <img src="{% static '/img/ProfessionalismIMG.png' %}" alt="Professionalism Icon" width="50" height="50">
+            <h3>Professionalism</h3>
+            <p>We communicate clearly, work respectfully, and represent the company well.</p>
+        </div>
+        <div class="ourValues-card fade-in-left">
+            <img src="{% static '/img/ExcellenceIMG.png' %}" alt="Excellence Icon" width="50" height="50">
+            <h3>Excellence</h3>
+            <p>We work hard, stay focused, and pay attention to every detail.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

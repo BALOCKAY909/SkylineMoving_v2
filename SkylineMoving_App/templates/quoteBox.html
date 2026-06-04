@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/quoteBox.css' %}">
+<div class="quote-box fade-in-right">
+    <h2 class="quote-title">Get Your Free Quote</h2>
+    <form method="POST" class="quote-form">
+        {% csrf_token %}
+        <div class="quote-field">
+            {{ form.name }}
+        </div>
+        <div class="quote-field">
+            {{ form.email }}
+        </div>
+        <div class="quote-field">
+            {{ form.phone }}
+        </div>
+        <div class="quote-field">
+            {{ form.description }}
+        </div>
+        <button type="submit" class="quote-btn">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,258 @@
+.navigation-bar
+{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  height: 120px;
+  box-sizing: border-box;
+}
+
+.navigation-bar a.nav-logo
+{
+  margin-right: 60px;
+}
+
+.navigation-bar a.nav-logo img
+{
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+.nav-links
+{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-quote-btn
+{
+  background: rgb(195, 28, 47);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.desktop-only
+{
+  margin-left: auto;
+}
+
+.nav-quote-btn:hover
+{
+  background: rgb(160, 20, 36);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.navigation-bar a
+{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navigation-bar a button
+{
+  background: rgb(195, 28, 47);
+  border: 2px solid rgb(195, 28, 47);
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  width: 100px;
+}
+
+.navigation-bar a button.inactive
+{
+  background: white;
+  color: rgb(195, 28, 47);
+  border: 2px solid white;
+}
+
+.navigation-bar a button.inactive:hover
+{
+  background: rgb(160, 20, 36);
+  color: #fff;
+  border: 2px solid rgb(160, 20, 36);
+}
+
+.navigation-bar a button:hover
+{
+  background: rgb(160, 20, 36);
+}
+
+.navigation-bar a button.active:hover
+{
+  background: rgb(195, 28, 47);
+}
+
+.hamburger
+{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.hamburger span
+{
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: rgb(195, 28, 47);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu
+{
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+.mobile-menu.open
+{
+  display: flex;
+}
+
+.mobile-menu a
+{
+  text-decoration: none;
+  width: 100%;
+  text-align: left;
+}
+
+.mobile-menu a button
+{
+  width: 100%;
+  background: rgb(195, 28, 47);
+  border: 2px solid rgb(195, 28, 47);
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 6px;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.mobile-menu a button:hover
+{
+  background: rgb(160, 20, 36);
+}
+
+.mobile-menu .nav-quote-btn
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  min-height: 46px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-menu .nav-quote-btn:hover
+{
+  background: rgb(195, 28, 47);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.mobile-menu-divider
+{
+  width: 100%;
+  border: none;
+  border-top: 1.5px solid #d1d1d1;
+  margin: 4px 0;
+}
+
+.mobile-call-btn
+{
+  width: 100%;
+  background: rgb(195, 28, 47);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  min-height: 46px;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mobile-call-btn:hover
+{
+  background: rgb(195, 28, 47);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.mobile-call-btn img
+{
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px)
+{
+  .nav-links
+  {
+    display: none;
+  }
+
+  .desktop-only
+  {
+    display: none !important;
+  }
+
+  .hamburger
+  {
+    display: flex;
+  }
+}

@@ -1,0 +1,94 @@
+.quote-box
+{
+  background: white;
+  border-radius: 10px;
+  border-top: 4px solid rgb(195, 28, 47);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 40px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.quote-title
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.quote-field
+{
+  margin-bottom: 16px;
+}
+
+.quote-field .form-control
+{
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #333;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.quote-field .form-control:focus
+{
+  border-color: rgb(195, 28, 47);
+}
+
+.quote-btn
+{
+  width: 100%;
+  padding: 12px;
+  background: rgb(195, 28, 47);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quote-btn:hover
+{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px)
+{
+  .quote-box
+  {
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 600px)
+{
+  .quote-field .form-control
+  {
+    font-size: clamp(0.75rem, 3vw, 0.95rem);
+  }
+
+  .quote-title
+  {
+    font-size: clamp(1rem, 5vw, 1.6rem);
+  }
+
+  .quote-btn
+  {
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+  }
+}
