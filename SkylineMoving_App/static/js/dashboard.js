@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (link.getAttribute("href") === currentPath) {
             button.classList.remove("inactive");
             button.classList.add("active");
+
+            link.addEventListener("click", function (e) {
+                e.preventDefault(); // stops page refresh
+            });
+
         } else {
             button.classList.add("inactive");
         }
