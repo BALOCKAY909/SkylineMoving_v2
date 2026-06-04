@@ -263,6 +263,7 @@ main
   margin: 0;
   font-family: Arial, sans-serif;
   color: #6F6E72;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 600px)
