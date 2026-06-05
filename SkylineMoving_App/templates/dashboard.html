@@ -9,6 +9,7 @@
     </title>
     <link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
     <link rel="stylesheet" href="{% static '/css/navigationBar.css' %}">
+    <link rel="stylesheet" href="{% static '/css/infoCopyright.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,6 +27,9 @@
             <a href="/about/">
                 <button>About</button>
             </a>
+            <a href="/reviews/">
+                <button>Reviews</button>
+            </a>
             <a href="/contact/">
                 <button>Contact</button>
             </a>
@@ -39,6 +43,7 @@
         <div class="mobile-menu" id="mobileMenu">
             <a href="/"><button>Home</button></a>
             <a href="/about/"><button>About</button></a>
+            <a href="/reviews/"><button>Reviews</button></a>
             <a href="/contact/"><button>Contact</button></a>
             <hr class="mobile-menu-divider">
             <a href="/contact/#quote" class="nav-quote-btn">Get a Free Quote</a>
@@ -92,6 +97,27 @@
         <div class="recap-textArea">
         </div>
         <div class="recap-textArea">
+            <h3 class="recap-heading">Contact</h3>
+            <p class="recap-contact recap-contact-phone">
+                <a href="tel:5312225122">
+                    <img src="{% static '/img/recapPhone.png' %}" alt="Phone" class="recap-phone-icon" width="24" height="24">
+                    (531) 222-5122
+                </a>
+            </p>
+            <p class="recap-contact recap-contact-mail">
+                <a href="mailto:skyline.moving.gp@gmail.com">
+                    <img src="{% static '/img/recapMail.png' %}" alt="Email" class="recap-mail-icon" width="24" height="24">
+                    skyline.moving.gp@gmail.com
+                </a>
+            </p>
+            <p class="recap-contact recap-contact-location">
+                <img src="{% static '/img/recapLocation.png' %}" alt="Location" class="recap-location-icon" width="24" height="24">
+                Serving Omaha, Lincoln, and surrounding areas across Nebraska
+            </p>
+            <p class="recap-contact recap-contact-hours">
+                <img src="{% static '/img/recapHours.png' %}" alt="Hours" class="recap-hours-icon" width="24" height="24">
+                Mon-Sun: 7:00 AM - 7:00 PM
+            </p>
         </div>
     </section>
     <hr class="small-section-divider">

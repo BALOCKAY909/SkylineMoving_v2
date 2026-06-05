@@ -36,6 +36,9 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+def reviews(request):
+    return render(request, 'reviews.html')
+
 def contact(request):
     if request.method == 'POST':
         success, form = quote_submission_handler(request)

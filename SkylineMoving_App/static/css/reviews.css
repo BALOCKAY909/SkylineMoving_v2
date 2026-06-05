@@ -1,0 +1,37 @@
+.reviews-hero
+{
+  background-color: rgb(195, 28, 47);
+  padding: 150px 40px;
+  min-height: 300px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+}
+
+.reviews-hero h1
+{
+  margin-top: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.reviews-hero p
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.reviews-hero-image
+{
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 160px;
+  object-fit: contain;
+}

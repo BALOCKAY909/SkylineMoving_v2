@@ -1,0 +1,15 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block title %}Reviews | Skyline Moving Nebraska{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/css/reviews.css' %}">
+<script src="{% static '/js/reviews.js' %}" defer></script>
+
+<div class="reviews-hero">
+    <h1 class="fade-in">Customer Reviews</h1>
+    <p class="fade-in">See what our customers have to say about their Skyline Moving experience.</p>
+    <img src="{% static '/img/starsImage.png' %}" alt="Customer Review Stars" class="reviews-hero-image fade-in-right">
+</div>
+{% endblock %}
