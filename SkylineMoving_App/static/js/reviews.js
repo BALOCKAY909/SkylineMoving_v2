@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const reviewSection = document.querySelector(".customer-reviews-section");
+    const reviewSection = document.querySelector(".customer-reviews-section, .reviews-section");
     const reviewCards = document.querySelectorAll(".review-card.review-fade-in");
 
     if (!reviewSection || reviewCards.length === 0) {

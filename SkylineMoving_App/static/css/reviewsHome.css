@@ -1,0 +1,91 @@
+.reviews-section
+{
+  background: #eeeeee;
+  padding: 60px 40px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reviews-heading
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.reviews-subtext
+{
+  font-family: Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #6F6E72;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.reviews-btn
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgb(195, 28, 47);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 60px;
+}
+
+.reviews-btn:hover
+{
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(195, 28, 47, 0.25);
+}
+
+.reviews-link-icon
+{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px)
+{
+  .reviews-grid
+  {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reviews-five-stars
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.reviews-five-stars-image
+{
+  width: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.reviews-ratingText
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: rgb(195, 28, 47);
+  font-weight: 700;
+}
