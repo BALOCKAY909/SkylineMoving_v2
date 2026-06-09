@@ -5,20 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (hamburger && mobileMenu) {
         hamburger.addEventListener("click", function () {
             mobileMenu.classList.toggle("open");
+            hamburger.classList.toggle("open");
         });
         document.addEventListener("click", function (e) {
             if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
                 mobileMenu.classList.remove("open");
+                hamburger.classList.remove("open");
             }
         });
         mobileMenu.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
                 mobileMenu.classList.remove("open");
+                hamburger.classList.remove("open");
             });
         });
         window.addEventListener("resize", function () {
             if (window.innerWidth > 1024) {
                 mobileMenu.classList.remove("open");
+                hamburger.classList.remove("open");
             }
         });
     }
