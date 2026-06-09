@@ -70,7 +70,7 @@
   background-color: rgba(195, 28, 47);
   background-position: left;
   background-size: cover;
-  padding: 150px 40px;
+  padding: 100px 60px;
   min-height: 300px;
   margin: 0;
   width: 100%;
@@ -156,6 +156,32 @@
   .steps
   {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 60px;
   }
+
+  .step
+  {
+    flex: none;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .steps h3
+  {
+    white-space: normal;
+  }
+}
+
+.fade-in
+{
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show
+{
+  opacity: 1;
+  transform: translate(0, 0);
 }
