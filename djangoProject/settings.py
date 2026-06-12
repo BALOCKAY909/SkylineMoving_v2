@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'SkylineMoving_App',
     'django_extensions',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [

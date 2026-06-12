@@ -7,6 +7,18 @@
     <title>
         {% block title %}Skyline Moving Nebraska{% endblock %}
     </title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+    <meta name="description" content="{% block meta_description %}Skyline Moving provides reliable moving services in Omaha, Lincoln, and surrounding Nebraska areas. 
+    Get a free quote for local, residential, commercial, and long-distance moving.{% endblock %}">
+    <meta property="og:image" content="https://skylinemovinggp.com/static/img/skylineMovingLogo.JPG">
+    <meta property="og:site_name" content="Skyline Moving Nebraska">
+    <link rel="canonical" href="https://skylinemovinggp.com{{ request.path }}">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="{% block og_title %}Skyline Moving Nebraska{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Reliable moving services in Omaha, Lincoln, and surrounding Nebraska areas.{% endblock %}">
+    <meta property="og:url" content="https://skylinemovinggp.com{{ request.path }}">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="{% static '/css/dashboard.css' %}">
     <link rel="stylesheet" href="{% static '/css/navigationBar.css' %}">
     <link rel="stylesheet" href="{% static '/css/infoCopyright.css' %}">
@@ -14,6 +26,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "MovingCompany",
+    "name": "Skyline Moving Nebraska",
+    "url": "https://skylinemovinggp.com/",
+    "telephone": "+15312225122",
+    "email": "skyline.moving.gp@gmail.com",
+    "description": "Skyline Moving Nebraska provides moving services in Omaha, Lincoln, and surrounding Nebraska areas.",
+    "areaServed": [
+        "Omaha, NE",
+        "Lincoln, NE",
+        "Elkhorn, NE",
+        "Bellevue, NE",
+        "Papillion, NE",
+        "La Vista, NE",
+        "Gretna, NE"
+    ],
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 07:00-19:00"
+    }
+    </script>
 </head>
 
 <body>
@@ -147,6 +181,5 @@
         </div>
     </section>
     <script src="{% static '/js/dashboard.js' %}"></script>
-</body>
 </body>
 </html>
