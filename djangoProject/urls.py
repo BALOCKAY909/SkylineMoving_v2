@@ -16,8 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+
+def google_verification(request):
+    return HttpResponse(
+        "google-site-verification: googleb1466d74e1d07251.html",
+        content_type="text/plain"
+    )
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('googleb1466d74e1d07251.html', google_verification, name='google_verification'),
     path('', include('SkylineMoving_App.urls')),
 ]
