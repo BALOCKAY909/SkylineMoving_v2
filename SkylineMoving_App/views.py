@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -17,7 +18,7 @@ def quote_submission_handler(request):
         send_mail(
             subject=f'New Quote Request from {name}',
             message=f'Name: {name}\nEmail: {email}\nPhone: {phone}\nJob Description: {description}',
-            from_email='skyline.moving.gp@gmail.com',
+            from_email=os.environ.get('EMAIL_HOST_USER'),
             recipient_list=['skyline.moving.gp@gmail.com'],
         )
         messages.success(request, 'Your quote request has been submitted! We will be in touch shortly.')
