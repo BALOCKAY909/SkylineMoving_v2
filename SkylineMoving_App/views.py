@@ -19,7 +19,7 @@ def quote_submission_handler(request):
             subject=f'New Quote Request from {name}',
             message=f'Name: {name}\nEmail: {email}\nPhone: {phone}\nJob Description: {description}',
             from_email=os.environ.get('EMAIL_HOST_USER'),
-            recipient_list=['skyline.moving.gp@gmail.com'],
+            recipient_list=[os.environ.get('EMAIL_HOST_USER')],
         )
         messages.success(request, 'Your quote request has been submitted! We will be in touch shortly.')
         return True, form
