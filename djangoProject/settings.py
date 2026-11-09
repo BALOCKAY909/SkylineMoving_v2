@@ -44,7 +44,7 @@ LOGGING = {
     },
 }
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'skylinemovinggp.com', 'skyline-moving-gp-9286c2aaa5d9.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1', 'skylinemovinggp.com', 'www.skylinemovinggp.com', 'skyline-moving-gp-9286c2aaa5d9.herokuapp.com']
 
 
 # Application definition
