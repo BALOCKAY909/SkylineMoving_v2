@@ -21,13 +21,6 @@ from django.http import HttpResponse
 
 def google_verification(request):
     return HttpResponse(
-        "google-site-verification: googleb1466d74e1d07251.html",
-        content_type="text/plain"
-    )
-
-
-def google_verification_2(request):
-    return HttpResponse(
         "google-site-verification: google1edc07d6aefe49bb.html",
         content_type="text/html"
     )
@@ -35,7 +28,6 @@ def google_verification_2(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('google1edc07d6aefe49bb.html', google_verification_2, name='google_verification_2'),
-    path('googleb1466d74e1d07251.html', google_verification, name='google_verification'),
+    path('google1edc07d6aefe49bb.html', google_verification, name='google_verification'),
     path('', include('SkylineMoving_App.urls')),
 ]
