@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    const topBar = document.querySelector(".locations-top-bar");
+    function updateNavOffset() {
+        const barHeight = topBar ? topBar.offsetHeight : 0;
+        const offset = Math.max(0, barHeight - window.scrollY);
+        document.documentElement.style.setProperty("--nav-top", offset + "px");
+    }
+    updateNavOffset();
+    window.addEventListener("scroll", updateNavOffset, { passive: true });
+    window.addEventListener("resize", updateNavOffset);
+
     const hamburger = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
     if (hamburger && mobileMenu) {

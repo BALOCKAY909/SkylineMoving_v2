@@ -6,7 +6,7 @@
   padding: 0 40px;
   position: fixed;
   width: 100%;
-  top: 28px;
+  top: var(--nav-top, 28px);
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   height: 120px;
