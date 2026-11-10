@@ -19,14 +19,20 @@ body
 
 main
 {
-  padding-top: 120px;
+  padding-top: 148px;
 }
 
 .locations-top-bar
 {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 28px;
+  box-sizing: border-box;
+  z-index: 1001;
   background: rgb(195, 28, 47);
-  padding: 6px 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,7 +164,7 @@ main
 
 .success-message {
   position: fixed;
-  top: 130px;
+  top: 158px;
   left: 50%;
   transform: translateX(-50%);
   background: #e6f4ea;
