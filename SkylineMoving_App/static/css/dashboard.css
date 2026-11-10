@@ -22,6 +22,28 @@ main
   padding-top: 120px;
 }
 
+.locations-top-bar
+{
+  width: 100%;
+  background: rgb(195, 28, 47);
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.locations-top-bar .locations-text
+{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
 .site-info
 {
   padding: 60px 40px;
