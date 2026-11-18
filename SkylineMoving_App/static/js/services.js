@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const servicesSection = document.querySelector(".services-broad");
-    const serviceCards = document.querySelectorAll(".service-card.service-fade-in");
+function setupStaggeredFadeIn(sectionSelector, cardSelector, threshold) {
+    const servicesSection = document.querySelector(sectionSelector);
+    const serviceCards = document.querySelectorAll(cardSelector);
 
     if (!servicesSection || serviceCards.length === 0) {
         return;
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, {
-        threshold: 0.2
+        threshold: threshold
     });
 
     function startObserving() {
@@ -51,4 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         window.addEventListener("load", startObserving);
     }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    setupStaggeredFadeIn(".services-broad", ".service-card.service-fade-in", 0.2);
+    setupStaggeredFadeIn(".services-specific", ".specific-card.specific-fade-in", 0.05);
 });
