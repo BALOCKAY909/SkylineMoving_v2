@@ -28,6 +28,21 @@
   flex: 1;
 }
 
+.recap-textArea:nth-child(2)
+{
+  flex: 0 0 60px;
+}
+
+@media (min-width: 751px)
+{
+  .recap-textArea:nth-child(3),
+  .recap-textArea:nth-child(4)
+  {
+    flex: 0 0 auto;
+    margin-right: 60px;
+  }
+}
+
 .recap-text
 {
   font-size: 0.85rem;
@@ -115,6 +130,24 @@
 .recap-contact a:hover
 {
   color: rgb(195, 28, 47);
+}
+
+.recap-more-link
+{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recap-arrow
+{
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.recap-more-link:hover .recap-arrow
+{
+  transform: translateX(6px);
 }
 
 .recap-contact-phone a
@@ -221,7 +254,7 @@
   font-size: 0.8rem;
 }
 
-@media (max-width: 750px)
+@media (max-width: 1024px)
 {
   .recap-section
   {

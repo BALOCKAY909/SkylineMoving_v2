@@ -1,0 +1,133 @@
+{% extends "dashboard.html" %}
+{% load static %}
+
+{% block title %}Services | Skyline Moving Nebraska{% endblock %}
+
+{% block meta_description %}
+Explore moving services from Skyline Moving Nebraska, including local, long-distance, residential, and commercial moves in Omaha, Lincoln, and surrounding Nebraska communities.
+{% endblock %}
+
+{% block og_title %}Services | Skyline Moving Nebraska{% endblock %}
+
+{% block og_description %}
+Local, long-distance, residential, and commercial moving services from Skyline Moving Nebraska, serving Omaha, Lincoln, and surrounding areas.
+{% endblock %}
+
+{%block content %}
+<link rel="stylesheet" href="{% static '/css/services.css' %}">
+<script src="{% static '/js/services.js' %}" defer></script>
+
+<div class="services-hero">
+    <h1 class="fade-in">Every Move. Every Need. We've Got You Covered.</h1>
+    <p class="fade-in">From residential moves to commercial relocations, our experienced Omaha movers provide reliable, personalized moving solutions throughout Nebraska.</p>
+</div>
+
+<div class="services-broad">
+    <div class="services-grid">
+        <div class="service-card service-card-icon service-fade-in">
+            <div class="service-icon-wrap">
+                <img class="service-icon service-icon-default" src="{% static '/img/homeIMG.png' %}" alt="Local moves icon">
+                <img class="service-icon service-icon-hover" src="{% static '/img/darkhomeIMG.png' %}" alt="" aria-hidden="true">
+            </div>
+            <div class="service-body">
+                <h3 class="service-title">Local Moves</h3>
+                <p class="service-text">Moving across town or just down the street? Our Omaha-based movers make every local move simple, smooth, and stress-free.</p>
+            </div>
+        </div>
+        <div class="service-card service-card-icon service-fade-in">
+            <div class="service-icon-wrap">
+                <img class="service-icon service-icon-default" src="{% static '/img/glovesIMG.png' %}" alt="White-glove moves icon">
+                <img class="service-icon service-icon-hover" src="{% static '/img/darkglovesIMG.png' %}" alt="" aria-hidden="true">
+            </div>
+            <div class="service-body">
+                <h3 class="service-title">White-Glove Moves</h3>
+                <p class="service-text">Exceptional care for your home and most valued belongings, with meticulous attention to every detail.</p>
+            </div>
+        </div>
+        <div class="service-card service-card-icon service-fade-in">
+            <div class="service-icon-wrap">
+                <img class="service-icon service-icon-default" src="{% static '/img/boxIMG.png' %}" alt="Packing services icon">
+                <img class="service-icon service-icon-hover" src="{% static '/img/darkboxIMG.png' %}" alt="" aria-hidden="true">
+            </div>
+            <div class="service-body">
+                <h3 class="service-title">Packing Services</h3>
+                <p class="service-text">Take the stress out of packing with professional care and attention to every item, from everyday essentials to delicate valuables.</p>
+            </div>
+        </div>
+        <div class="service-card service-card-icon service-fade-in">
+            <div class="service-icon-wrap">
+                <img class="service-icon service-icon-default" src="{% static '/img/boxtruckIMG.png' %}" alt="Loading services icon">
+                <img class="service-icon service-icon-hover" src="{% static '/img/darkboxtruckIMG.png' %}" alt="" aria-hidden="true">
+            </div>
+            <div class="service-body">
+                <h3 class="service-title">Loading Services</h3>
+                <p class="service-text">Professional loading services for rental trucks and moving containers, ensuring your belongings are handled with care and packed securely.</p>
+            </div>
+        </div>
+        <div class="service-card service-card-icon service-fade-in">
+            <div class="service-icon-wrap">
+                <img class="service-icon service-icon-default" src="{% static '/img/officeIMG.png' %}" alt="Commercial moves icon">
+                <img class="service-icon service-icon-hover" src="{% static '/img/darkofficeIMG.png' %}" alt="" aria-hidden="true">
+            </div>
+            <div class="service-body">
+                <h3 class="service-title">Commercial Moves</h3>
+                <p class="service-text">Professional commercial moving services throughout Omaha and Nebraska, ensuring efficient relocations with minimal disruption to your business operations.</p>
+            </div>
+        </div>
+        <div class="service-card service-card-icon service-fade-in">
+            <div class="service-icon-wrap">
+                <img class="service-icon service-icon-default" src="{% static '/img/streetIMG.png' %}" alt="Long-distance moves icon">
+                <img class="service-icon service-icon-hover" src="{% static '/img/darkstreetIMG.png' %}" alt="" aria-hidden="true">
+            </div>
+            <div class="service-body">
+                <h3 class="service-title">Long-Distance Moves</h3>
+                <p class="service-text">Reliable long-distance moving services from Omaha to destinations near and far, with careful planning and professional handling every mile of the way.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="services-specific" id="services-specific">
+    <h2 class="specific-title">Moving Solutions for Every Situation</h2>
+    <p class="specific-subtitle">Specialized moving services tailored to your unique needs, handled with care, precision, and expertise.</p>
+    <div class="specific-grid">
+        <div class="specific-card">
+            <h3 class="specific-card-title">Residential Moves</h3>
+            <p class="specific-card-text">A new home, a fresh start. Let our trusted Omaha movers handle every step with care.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Office Moves</h3>
+            <p class="specific-card-text">Professional office relocations throughout Omaha and Nebraska, with careful coordination of furniture, equipment, and workspaces to minimize downtime.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Piano Movers</h3>
+            <p class="specific-card-text">Specialized piano moving services throughout Omaha and Nebraska, ensuring every instrument is handled with precision, expertise, and exceptional care.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Apartment Moves</h3>
+            <p class="specific-card-text">From tight stairways to narrow hallways, our experienced movers make apartment relocations simple, efficient, and stress-free.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Senior Movers</h3>
+            <p class="specific-card-text">Compassionate moving services designed to make life's next chapter easier, with patience, respect, and personalized care every step of the way.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Furniture Movers</h3>
+            <p class="specific-card-text">From bulky furniture to delicate antiques, our experienced movers ensure every piece is handled with precision, care, and attention to detail.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Last-Minute Movers</h3>
+            <p class="specific-card-text">Unexpected move? Our responsive moving team is ready to help with fast, reliable service when time is of the essence.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Military Movers</h3>
+            <p class="specific-card-text">Reliable military moving services for PCS transfers and relocations, ensuring a smooth, organized transition for service members and their families.</p>
+        </div>
+        <div class="specific-card">
+            <h3 class="specific-card-title">Nebraska Statewide Movers</h3>
+            <p class="specific-card-text">Reliable statewide moving services for homes and businesses, delivering seamless relocations to destinations across Nebraska with care and efficiency.</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
