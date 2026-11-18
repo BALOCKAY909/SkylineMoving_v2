@@ -1,12 +1,9 @@
-function setupStaggeredFadeIn(sectionSelector, cardSelector, threshold) {
-    const servicesSection = document.querySelector(sectionSelector);
-    const serviceCards = document.querySelectorAll(cardSelector);
+function setupStaggeredFadeIn(cardSelector, threshold) {
+    const cards = Array.from(document.querySelectorAll(cardSelector));
 
-    if (!servicesSection || serviceCards.length === 0) {
+    if (cards.length === 0) {
         return;
     }
-
-    let loadedNearBottom = false;
 
     function isNearBottom() {
         const scrollPosition = window.scrollY + window.innerHeight;
@@ -15,23 +12,26 @@ function setupStaggeredFadeIn(sectionSelector, cardSelector, threshold) {
         return scrollPosition >= pageHeight * 0.75;
     }
 
-    const servicesObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                let cardsArray = Array.from(serviceCards);
+    const observer = new IntersectionObserver(function (entries) {
+        let batch = entries
+            .filter(function (entry) { return entry.isIntersecting; })
+            .map(function (entry) { return entry.target; });
 
-                if (loadedNearBottom || isNearBottom()) {
-                    cardsArray.reverse();
-                }
+        if (batch.length === 0) {
+            return;
+        }
 
-                cardsArray.forEach(function (card, index) {
-                    setTimeout(function () {
-                        card.classList.add("show");
-                    }, index * 150);
-                });
+        batch.sort(function (a, b) { return cards.indexOf(a) - cards.indexOf(b); });
 
-                servicesObserver.unobserve(servicesSection);
-            }
+        if (isNearBottom()) {
+            batch.reverse();
+        }
+
+        batch.forEach(function (card, index) {
+            observer.unobserve(card);
+            setTimeout(function () {
+                card.classList.add("show");
+            }, index * 150);
         });
     }, {
         threshold: threshold
@@ -40,8 +40,9 @@ function setupStaggeredFadeIn(sectionSelector, cardSelector, threshold) {
     function startObserving() {
         requestAnimationFrame(function () {
             requestAnimationFrame(function () {
-                loadedNearBottom = isNearBottom();
-                servicesObserver.observe(servicesSection);
+                cards.forEach(function (card) {
+                    observer.observe(card);
+                });
             });
         });
     }
@@ -54,6 +55,6 @@ function setupStaggeredFadeIn(sectionSelector, cardSelector, threshold) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    setupStaggeredFadeIn(".services-broad", ".service-card.service-fade-in", 0.2);
-    setupStaggeredFadeIn(".services-specific", ".specific-card.specific-fade-in", 0.05);
+    setupStaggeredFadeIn(".service-card.service-fade-in", 0.1);
+    setupStaggeredFadeIn(".specific-card.specific-fade-in", 0.1);
 });

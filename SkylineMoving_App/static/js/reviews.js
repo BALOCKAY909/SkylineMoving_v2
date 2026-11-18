@@ -1,48 +1,55 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const reviewSection = document.querySelector(".customer-reviews-section, .reviews-section");
-    const reviewCards = document.querySelectorAll(".review-card.review-fade-in");
+    const reviewCards = Array.from(document.querySelectorAll(".review-card.review-fade-in"));
 
-    if (!reviewSection || reviewCards.length === 0) {
+    if (reviewCards.length === 0) {
         return;
     }
 
-    let loadedNearBottom = false;
-
-    function checkIfLoadedNearBottom() {
+    function isNearBottom() {
         const scrollPosition = window.scrollY + window.innerHeight;
         const pageHeight = document.documentElement.scrollHeight;
 
-        loadedNearBottom = scrollPosition >= pageHeight * 0.75;
+        return scrollPosition >= pageHeight * 0.75;
     }
 
-    // Wait a moment so the browser can restore scroll position after refresh
-    requestAnimationFrame(function () {
-        requestAnimationFrame(function () {
-            checkIfLoadedNearBottom();
-        });
-    });
-
     const reviewObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                let cardsArray = Array.from(reviewCards);
+        let batch = entries
+            .filter(function (entry) { return entry.isIntersecting; })
+            .map(function (entry) { return entry.target; });
 
-                if (loadedNearBottom) {
-                    cardsArray.reverse();
-                }
+        if (batch.length === 0) {
+            return;
+        }
 
-                cardsArray.forEach(function (card, index) {
-                    setTimeout(function () {
-                        card.classList.add("show");
-                    }, index * 150);
-                });
+        batch.sort(function (a, b) { return reviewCards.indexOf(a) - reviewCards.indexOf(b); });
 
-                reviewObserver.unobserve(reviewSection);
-            }
+        if (isNearBottom()) {
+            batch.reverse();
+        }
+
+        batch.forEach(function (card, index) {
+            reviewObserver.unobserve(card);
+            setTimeout(function () {
+                card.classList.add("show");
+            }, index * 150);
         });
     }, {
-        threshold: 0.2
+        threshold: 0.1
     });
 
-    reviewObserver.observe(reviewSection);
+    function startObserving() {
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+                reviewCards.forEach(function (card) {
+                    reviewObserver.observe(card);
+                });
+            });
+        });
+    }
+
+    if (document.readyState === "complete") {
+        startObserving();
+    } else {
+        window.addEventListener("load", startObserving);
+    }
 });
