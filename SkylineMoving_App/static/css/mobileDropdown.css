@@ -22,6 +22,11 @@
 .mobile-menu.open
 {
   max-height: 600px;
+  max-height: min(600px, calc(100vh - 148px));
+  max-height: min(600px, calc(100dvh - 148px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   opacity: 1;
   padding: 24px 20px;
 }
